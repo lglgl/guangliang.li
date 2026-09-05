@@ -1,0 +1,46 @@
+baseURL: https://YOUR_GITHUB_USERNAME.github.io/cloud-native-notes/
+languageCode: zh-CN
+title: Cloud Native Notes
+theme: PaperMod
+
+enableRobotsTXT: true
+enableEmoji: true
+
+params:
+  env: production
+  description: 关于云计算、Kubernetes、DevOps、安全与可观测性的技术笔记。
+  author: YOUR_NAME
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  homeInfoParams:
+    Title: 云原生技术笔记
+    Content: Cloud · Kubernetes · DevOps · Security · Observability · Infrastructure
+
+menu:
+  main:
+    - name: 文章
+      url: posts/
+      weight: 10
+    - name: 分类
+      url: categories/
+      weight: 20
+    - name: 标签
+      url: tags/
+      weight: 30
+    - name: 关于
+      url: about/
+      weight: 40
+
+taxonomies:
+  category: categories
+  tag: tags
+
+caches:
+  images:
+    dir: :cacheDir/images
