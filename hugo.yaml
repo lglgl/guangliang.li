@@ -1,7 +1,8 @@
-baseURL: "http://localhost:1313/"
+baseURL: "https://guangliang.li/"
 languageCode: en-US
 title: "江湖路远"
 theme: "maupassant"
+locale: "en-us"
 
 enableRobotsTXT: true
 enableEmoji: true
