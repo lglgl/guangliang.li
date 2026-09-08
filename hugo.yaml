@@ -27,30 +27,27 @@ params:
 menu:
   main:
     - name: "Posts"
-      url: "posts/"
+      url: "/posts/"
       weight: 10
 
-    - name: "Categories"
-      url: "categories/"
+    - name: "Planning"
+      url: "/planning/"
       weight: 20
 
     - name: "About"
-      url: "about/"
+      url: "/about/"
       weight: 40
 
 taxonomies:
   category: categories
-  # tag: tags
 
 caches:
   images:
     dir: ":cacheDir/images"
 
-# Default post URL path: /post-title/
 permalinks:
   posts: "/:slugorcontentbasename"
 
-# Code highlighting
 markup:
   highlight:
     lineNos: true

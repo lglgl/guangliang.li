@@ -1,6 +1,7 @@
 ---
 title: "AWS Certified AI Practitioner 学习笔记"
 date: 2026-09-05
+summary: "AWS Certified AI Practitioner 考试的学习笔记，涵盖机器学习、生成式 AI、Responsible AI 等核心知识。"
 draft: false
 tags:
   - AWS

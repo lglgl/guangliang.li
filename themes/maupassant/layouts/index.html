@@ -1,22 +1,37 @@
-{{ define "content"}}
+{{ define "content" }}
 <div class="res-cons">
+
     {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" (slice "post" "posts")) }}
-    {{ range $index,$data := $paginator.Pages }}
-    {{if not .Params.hiddenFromHomePage }}
+
+    {{ range $paginator.Pages }}
+
+    {{ if not .Params.hiddenFromHomePage }}
+
     <article class="post">
+
         <header>
             <h1 class="post-title">
-                <a href="{{ .Permalink }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+                    {{ .Title }}
+                </a>
             </h1>
         </header>
+
         {{ partial "post-meta.html" . }}
+
+        {{ if .Params.summary }}
         <div class="post-content">
-            {{ .Summary }}……
+            {{ .Params.summary }}
         </div>
-        <p class="readmore"><a href="{{ .Permalink }}" target="_blank">{{ i18n "continueReading" }}</a></p>
+        {{ end }}
+
     </article>
+
     {{ end }}
+
     {{ end }}
+
     {{ partial "paginator" . }}
+
 </div>
 {{ end }}
